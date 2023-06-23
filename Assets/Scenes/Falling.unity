@@ -278,6 +278,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383f62b9ff4091343bdd7d4a7577d2c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1564596724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564596712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f636e5d70d0a314e83f6748642d3438, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1682423137344824940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -334,6 +346,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8469265603179665207, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
       propertyPath: m_Size.x
       value: 0.7505313
@@ -350,6 +378,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.07258323
       objectReference: {fileID: 0}
+    - target: {fileID: 8469265603179665207, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -357,4 +389,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 746090718971511412, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1564596718}
+    - targetCorrespondingSourceObject: {fileID: 746090718971511412, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1564596724}
   m_SourcePrefab: {fileID: 100100000, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}

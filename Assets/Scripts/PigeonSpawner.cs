@@ -48,7 +48,6 @@ public class PigeonSpawner : MonoBehaviour
             spawnPos = new Vector2(Random.Range(screenBounds.x * -1 + 1, screenBounds.x - 1), screenBounds.y * -1 - 0.5f);
             moveDir = Random.Range(0, 2);
         }
-        Debug.Log(r);
     }
 
 

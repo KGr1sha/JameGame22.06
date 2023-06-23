@@ -14,8 +14,7 @@ public class BobMovement : MonoBehaviour
     }
     void Update()
     {
-        movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
-        Debug.Log(movement);
+        movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized
     }
     private void FixedUpdate()
     {

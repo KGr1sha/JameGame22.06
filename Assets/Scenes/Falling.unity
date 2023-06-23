@@ -538,18 +538,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383f62b9ff4091343bdd7d4a7577d2c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1564596724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1564596712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f636e5d70d0a314e83f6748642d3438, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1564596725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,6 +551,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 829532988}
+--- !u!114 &1564596731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564596712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb95e1682f4c19f4e81d6f86ab2df210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1564596732}
+--- !u!95 &1564596732
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564596712}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5c225824614eacc40b89e8bee4e3fcc4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1661052846
 GameObject:
   m_ObjectHideFlags: 0
@@ -5560,8 +5582,11 @@ PrefabInstance:
       addedObject: {fileID: 1564596718}
     - targetCorrespondingSourceObject: {fileID: 746090718971511412, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1564596724}
+      addedObject: {fileID: 1564596725}
     - targetCorrespondingSourceObject: {fileID: 746090718971511412, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1564596725}
+      addedObject: {fileID: 1564596731}
+    - targetCorrespondingSourceObject: {fileID: 746090718971511412, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1564596732}
   m_SourcePrefab: {fileID: 100100000, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}

@@ -7,7 +7,7 @@ public class MoveForward : MonoBehaviour
 
     [SerializeField][Range(1f, 5f)] private float minSpeed = 1f;
     [SerializeField][Range(2f, 5f)] private float maxSpeed = 1f;
-    [SerializeField] private float fallingSpeed;
+    [SerializeField] private float fallingSpeed = 2f;
     private Vector2 screenBounds;
     private float speed;
     private int _moveDirection = 1;

@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class BobMovement : MonoBehaviour
 {
-    private float horizontal;
+    private Vector2 movement;
+    private Rigidbody2D rb;
     [SerializeField] private float movespeed = 2f;
-    
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        
-        transform.position = new Vector2(transform.position.x + horizontal * movespeed * Time.deltaTime, 0);   
+        movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+    }
+    private void FixedUpdate()
+    {
+        rb.MovePosition((Vector2)transform.position + (movement * movespeed * Time.deltaTime));
     }
 }

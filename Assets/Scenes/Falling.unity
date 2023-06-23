@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pigeonPrefab: {fileID: 5013663390199666461, guid: 944b6da97ce93d44ab21e2cc5c153ecf, type: 3}
-  spawnRate: 1.5
+  spawnRate: 2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5161,6 +5161,22 @@ PrefabInstance:
     - target: {fileID: 4448842753107422759, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469265603179665207, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7505313
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469265603179665207, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9125747
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469265603179665207, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.043102264
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469265603179665207, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.07258323
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

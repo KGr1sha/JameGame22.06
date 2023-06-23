@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BobMovement : MonoBehaviour
 {
-    private float horizontal;
+    private Vector2 movement;
     private Rigidbody2D rb;
     [SerializeField] private float movespeed = 2f;
 
@@ -14,7 +14,11 @@ public class BobMovement : MonoBehaviour
     }
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        rb.MovePosition(new Vector2(rb.position.x + horizontal * movespeed * Time.deltaTime, rb.position.y));
+        movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
+        Debug.Log(movement);
+    }
+    private void FixedUpdate()
+    {
+        rb.MovePosition((Vector2)transform.position + (movement * movespeed * Time.deltaTime));
     }
 }

@@ -100,9 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minSpeed: 1
-
   maxSpeed: 4
-
   fallingSpeed: 2
 --- !u!70 &7762588354079422801
 CapsuleCollider2D:
@@ -149,7 +147,7 @@ Animator:
   m_GameObject: {fileID: 5013663390199666461}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4b04a4a4fb3d72e4fb71f10c7ee379e1, type: 2}
+  m_Controller: {fileID: 9100000, guid: a5028766b5c5d774d9bfdd5ae2a929d0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

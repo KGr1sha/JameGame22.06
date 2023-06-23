@@ -7,7 +7,11 @@ public class PigeonSpawner : MonoBehaviour
 {
     [SerializeField] GameObject pigeonPrefab;
     [SerializeField] private float spawnRate = 1f;
+    private MoveForward pigeonScript;
     private Vector2 screenBounds;
+    private Vector2 spawnPos;
+    private int moveDir;
+    
 
     private void Start()
     {
@@ -17,10 +21,39 @@ public class PigeonSpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        float spawnX = Random.Range(screenBounds.x * -1 + 2, screenBounds.x - 2);
-        GameObject enemy = Instantiate(pigeonPrefab) as GameObject;
-        enemy.transform.position = new Vector2(spawnX, screenBounds.y * -1 - 1);
+        GameObject enemy = Instantiate(pigeonPrefab);
+        ChoseSpawnPos();
+        pigeonScript = enemy.GetComponent<MoveForward>();
+        pigeonScript.SetMoveDir(moveDir);
+        
+        enemy.transform.position = spawnPos;
     }
+
+
+    private void ChoseSpawnPos()
+    {
+        int r = Random.Range(0, 3);
+        if (r == 0)
+        {
+            spawnPos = new Vector2(screenBounds.x * -1 - 1, Random.Range(screenBounds.y * -1, screenBounds.y / 4));
+            moveDir = 1;
+        }
+        if (r == 1)
+        {
+            spawnPos = new Vector2(screenBounds.x + 1, Random.Range(screenBounds.y * -1, screenBounds.y / 4));
+            moveDir = 0;
+        }
+        if (r == 2)
+        {
+            spawnPos = new Vector2(Random.Range(screenBounds.x * -1 + 1, screenBounds.x - 1), screenBounds.y * -1 - 0.5f);
+            moveDir = Random.Range(0, 2);
+        }
+        Debug.Log(r);
+    }
+
+
+
+
 
     private IEnumerator PigeonWave()
     {

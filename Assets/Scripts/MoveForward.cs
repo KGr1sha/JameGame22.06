@@ -10,14 +10,14 @@ public class MoveForward : MonoBehaviour
     [SerializeField] private float fallingSpeed;
     private Vector2 screenBounds;
     private float speed;
-    private int _moveDirection;
+    private int _moveDirection = 1;
     private SpriteRenderer sprite;
     
     private void Start()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         speed = Random.Range(minSpeed, maxSpeed + 1);   
-        _moveDirection = Random.Range(0, 2);
+        
         sprite = GetComponent<SpriteRenderer>();
         if (_moveDirection != 0)
         {
@@ -40,6 +40,15 @@ public class MoveForward : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    public void SetMoveDir(int moveDir)
+    {
+        _moveDirection = moveDir;
+    }
+
+
+
+
     private void Flip()
     {
         sprite.flipX = !sprite.flipX;

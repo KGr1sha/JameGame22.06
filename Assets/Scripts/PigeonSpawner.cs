@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
+
 public class PigeonSpawner : MonoBehaviour
 {
+    
     [SerializeField] GameObject pigeonPrefab;
     [SerializeField] private float spawnRate = 1f;
     private MoveForward pigeonScript;

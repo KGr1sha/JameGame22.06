@@ -7,21 +7,38 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     [SerializeField] private Text scoreText;
-    private int score;
+    [SerializeField] private GameObject _pigeonSpawner;
+    [SerializeField] private GameObject _stayaSpawner;
+    private PigeonSpawner pigeonScript;
+    private StayaSpawner stayaScript;
+    [SerializeField] GameObject pigeonPrefab;
+    
+    
+    
+    private float difficulty = 1f;
+    
+    
+    public int score;
 
     private void Start()
     {
         StartCoroutine(addScore());
+        pigeonScript = _pigeonSpawner.GetComponent<PigeonSpawner>();
+        stayaScript = _stayaSpawner.GetComponent <StayaSpawner>();
     }
     private IEnumerator addScore()
     {
         while(true)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.2f);
             score++;
             scoreText.text = "SCORE: " + score;
-
+            if (score % 50 == 0)
+            {
+                difficulty += .1f;
+                pigeonScript.IncreaseDifficulty(difficulty);
+                stayaScript.IncreaseDifficulty();
+            }
         }
-
     }
 }

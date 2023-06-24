@@ -6,7 +6,13 @@ public class BobLife : MonoBehaviour
 {
     private bool isHit = false;
     [SerializeField] Animator animator;
-    
+    private Score _score;
+
+    private void Start()
+    {
+        _score = GetComponent<Score>();
+    }
+
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -20,7 +26,7 @@ public class BobLife : MonoBehaviour
         else
             if (collision.gameObject.tag == "Enemy" && isHit)
             {
-                Debug.Log("Death");
+                _score.score = 0;
             }
     }
 
@@ -29,9 +35,8 @@ public class BobLife : MonoBehaviour
 
     private IEnumerator UnderHit()
     {
-        
+
         yield return new WaitForSeconds(4.5f);
-        Debug.Log("nothit");
         isHit = false;
         animator.SetBool("isHit", false);
     }

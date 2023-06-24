@@ -14,11 +14,13 @@ public class PigeonSpawner : MonoBehaviour
     private Vector2 spawnPos;
     private int moveDir;
     
+    
 
     private void Start()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         StartCoroutine(PigeonWave());
+        
     }
 
     private void SpawnEnemy()
@@ -26,7 +28,9 @@ public class PigeonSpawner : MonoBehaviour
         GameObject enemy = Instantiate(pigeonPrefab);
         ChoseSpawnPos();
         pigeonScript = enemy.GetComponent<MoveForward>();
+        pigeonScript.UpdateSpeed(2f);
         pigeonScript.SetMoveDir(moveDir);
+        
         
         enemy.transform.position = spawnPos;
     }
@@ -52,10 +56,6 @@ public class PigeonSpawner : MonoBehaviour
         }
     }
 
-
-
-
-
     private IEnumerator PigeonWave()
     {
         while (true)
@@ -64,4 +64,5 @@ public class PigeonSpawner : MonoBehaviour
             SpawnEnemy();
         }
     }
+
 }

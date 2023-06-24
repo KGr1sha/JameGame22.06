@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 1
   maxSpeed: 4
-  fallingSpeed: 2
+  goesUp: 1
 --- !u!70 &7762588354079422801
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

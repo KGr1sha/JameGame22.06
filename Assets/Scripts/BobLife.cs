@@ -28,7 +28,7 @@ public class BobLife : MonoBehaviour
             {
             Death();
             }
-        if (collision.gameObject.tag == "Orel")
+        if (collision.gameObject.tag == "Kluv")
         {
             Debug.Log("OREEEEEEL");
             Death();

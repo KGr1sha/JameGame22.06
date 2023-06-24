@@ -89,4 +89,10 @@ public class StayaSpawner : MonoBehaviour
             SpawnEnemy();
         }
     }
+
+
+    public void IncreaseDifficulty()
+    {
+        spawnRate *= 0.8f;
+    }
 }

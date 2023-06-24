@@ -59,7 +59,6 @@ public class MoveForward : MonoBehaviour
     public void UpdateSpeed(float multiplier)
     {
         speed = baseSpeed * multiplier;
-        Debug.Log(speed);
     }
 }
 

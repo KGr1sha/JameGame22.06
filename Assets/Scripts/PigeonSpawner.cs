@@ -70,5 +70,6 @@ public class PigeonSpawner : MonoBehaviour
     {
         prefabScript.minSpeed *= diff;
         prefabScript.maxSpeed *= diff;
+        spawnRate *= 0.8f;
     }
 }

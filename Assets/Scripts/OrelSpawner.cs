@@ -24,11 +24,13 @@ public class OrelSpawner : MonoBehaviour
         indHeight = indicatorSprite.bounds.size.y / 2;
     }
 
-    private void Spawn()
+    private IEnumerator Spawn()
     {
 
         GameObject enemy = Instantiate(orelPrefab);
         enemy.transform.position = spawnPosition;
+        yield return new WaitForSeconds(5f);
+        Destroy(enemy);
     }
 
 
@@ -69,7 +71,7 @@ public class OrelSpawner : MonoBehaviour
             yield return new WaitForSeconds(spawnRate);
             StartCoroutine(Indicator());
             yield return new WaitForSeconds(5f);
-            Spawn();
+            StartCoroutine(Spawn());
         }
         
     }

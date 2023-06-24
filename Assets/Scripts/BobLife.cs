@@ -26,11 +26,19 @@ public class BobLife : MonoBehaviour
         else
             if (collision.gameObject.tag == "Enemy" && isHit)
             {
-                _score.score = 0;
+            Death();
             }
+        if (collision.gameObject.tag == "Orel")
+        {
+            Debug.Log("OREEEEEEL");
+            Death();
+        }
     }
 
-
+    private void Death()
+    {
+        Debug.Log("DEATH");
+    }
 
 
     private IEnumerator UnderHit()

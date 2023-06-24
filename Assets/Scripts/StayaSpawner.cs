@@ -63,16 +63,16 @@ public class StayaSpawner : MonoBehaviour
         ChoseSpawn();
         GameObject indicator = Instantiate(indicatorPrefab);
         ind = indicator.GetComponent<SpriteRenderer>();
-        indicatorWidth = ind.bounds.size.x / 2;
+        indicatorWidth = ind.bounds.size.x / 4;
         if (r == 0)
         {
-            indicatorPos = new Vector2(spawnPosition.x + objectWidth + indicatorWidth, spawnPosition.y);
-            ind.flipX = false;
+            indicatorPos = new Vector2(spawnPosition.x + objectWidth + indicatorWidth / 2, spawnPosition.y);
+            ind.flipX = true;
         }
         if(r == 1)
         {
-            indicatorPos = new Vector2(spawnPosition.x - objectWidth - indicatorWidth, spawnPosition.y);
-            ind.flipX = true;
+            indicatorPos = new Vector2(spawnPosition.x - objectWidth - indicatorWidth / 2, spawnPosition.y);
+            ind.flipX = false;
         }
         indicator.transform.position = indicatorPos;
         yield return new WaitForSeconds(1);

@@ -11,7 +11,7 @@ public class MoveForward : MonoBehaviour
     private float fallingSpeed = 1f;
     private Vector2 screenBounds;
     private float speed;
-    private float baseSpeed;
+    private float baseSpeed = 3f;
     private int _moveDirection = 1;
     
     

@@ -5,13 +5,13 @@ using UnityEngine;
 public class MoveForward : MonoBehaviour
 {
 
-    [SerializeField] private float minSpeed = 1f;
-    [SerializeField] private float maxSpeed = 2f;
+    [SerializeField] public float minSpeed = 1f;
+    [SerializeField] public float maxSpeed = 2f;
     [SerializeField] private bool goesUp;
-    private float difficultiMultiplier = 1f;
     private float fallingSpeed = 1f;
     private Vector2 screenBounds;
     private float speed;
+    private float baseSpeed;
     private int _moveDirection = 1;
     
     
@@ -21,7 +21,7 @@ public class MoveForward : MonoBehaviour
         speed = Random.Range(minSpeed, maxSpeed + 1);
         if (goesUp)
             fallingSpeed = Random.Range(speed * 0.5f, speed);
-
+        baseSpeed = speed;
         
         if (_moveDirection != 0)
         {
@@ -58,7 +58,7 @@ public class MoveForward : MonoBehaviour
     }
     public void UpdateSpeed(float multiplier)
     {
-        speed *= multiplier;
+        speed = baseSpeed * multiplier;
         Debug.Log(speed);
     }
 }

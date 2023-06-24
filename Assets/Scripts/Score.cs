@@ -9,7 +9,10 @@ public class Score : MonoBehaviour
     [SerializeField] private Text scoreText;
     [SerializeField] private GameObject _pigeonSpawner;
     [SerializeField] private GameObject _stayaSpawner;
+    private PigeonSpawner pigeonScript;
+    private StayaSpawner stayaScript;
     [SerializeField] GameObject pigeonPrefab;
+    
     
     
     private float difficulty = 1f;
@@ -20,6 +23,7 @@ public class Score : MonoBehaviour
     private void Start()
     {
         StartCoroutine(addScore());
+        pigeonScript = _pigeonSpawner.GetComponent<PigeonSpawner>();
     }
     private IEnumerator addScore()
     {
@@ -31,7 +35,7 @@ public class Score : MonoBehaviour
             if (score % 20 == 0)
             {
                 difficulty += .1f;
-                
+                pigeonScript.IncreaseDifficulty(difficulty);
             }
         }
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartCamera : MonoBehaviour
 {
@@ -19,5 +20,9 @@ public class StartCamera : MonoBehaviour
         temp.y = player.position.y;
 
         transform.position = temp;
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            SceneManager.LoadScene("Falling");
+        }
     }
 }

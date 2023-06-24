@@ -29,6 +29,8 @@ public class OrelSpawner : MonoBehaviour
 
         GameObject enemy = Instantiate(orelPrefab);
         enemy.transform.position = spawnPosition;
+        if (r == 0)
+            enemy.transform.localScale = new Vector3(enemy.transform.localScale.x * -1, enemy.transform.localScale.y, enemy.transform.localScale.z);
         yield return new WaitForSeconds(5f);
         Destroy(enemy);
     }

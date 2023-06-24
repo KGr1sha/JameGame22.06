@@ -590,6 +590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orelPrefab: {fileID: 2669047998825285126, guid: 202d3d51d582b0d4caaf1dcc160a56e6, type: 3}
+  indicatorPrefab: {fileID: 4620787229380435162, guid: 7a8a442cd3077e44fa1d12ddcf968f85, type: 3}
 --- !u!4 &356828184
 Transform:
   m_ObjectHideFlags: 0

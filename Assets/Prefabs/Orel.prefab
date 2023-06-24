@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5317617067870439247}
   - component: {fileID: 1775908220489899559}
   - component: {fileID: 6083380837047522017}
-  - component: {fileID: 1951469419500592790}
+  - component: {fileID: 2693601267788781192}
   m_Layer: 0
   m_Name: Orel
   m_TagString: Enemy
@@ -206,8 +206,8 @@ PolygonCollider2D:
       - {x: -0.19781011, y: 0.2407191}
       - {x: -0.259714, y: 0.20496061}
   m_UseDelaunayMesh: 0
---- !u!61 &1951469419500592790
-BoxCollider2D:
+--- !u!68 &2693601267788781192
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -238,19 +238,31 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15483233, y: 0.04227805}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 0.64, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.33033532, y: 0.28692997}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.32077634, y: 0.19304556}
+  - {x: 0.08193198, y: 0.19137907}
+  - {x: 0.06989848, y: 0.1724889}
+  - {x: 0.038933657, y: 0.17389834}
+  - {x: -0.031173088, y: 0.11187731}
+  - {x: -0.06827754, y: 0.11177472}
+  - {x: -0.069867104, y: 0.12266808}
+  - {x: -0.1999686, y: 0.12138473}
+  - {x: -0.2516058, y: 0.069116764}
+  - {x: -0.25066093, y: 0.028521886}
+  - {x: -0.21182819, y: 0.009397352}
+  - {x: -0.17499806, y: -0.012088595}
+  - {x: -0.022994185, y: -0.015589863}
+  - {x: 0.020734373, y: -0.08064989}
+  - {x: 0.17892803, y: -0.12047925}
+  - {x: 0.28126147, y: -0.15384652}
+  - {x: 0.3216515, y: -0.15352432}
+  - {x: 0.32072616, y: 0.1895939}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &2955715687143791552
 GameObject:
   m_ObjectHideFlags: 0

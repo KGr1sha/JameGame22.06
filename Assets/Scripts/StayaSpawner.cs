@@ -17,6 +17,7 @@ public class StayaSpawner : MonoBehaviour
     private int r;
     private Vector2 indicatorPos;
     private SpriteRenderer ind;
+    
 
 
     void Start()
@@ -25,7 +26,7 @@ public class StayaSpawner : MonoBehaviour
         SpriteRenderer sprite = stayaPrefab.GetComponent<SpriteRenderer>();
         objectWidth = sprite.bounds.size.x / 2;
         objectHeight = sprite.bounds.size.y / 2;
-        
+
         StartCoroutine(StayaSpawn());
     }
     void ChoseSpawn()
@@ -48,9 +49,10 @@ public class StayaSpawner : MonoBehaviour
     void SpawnEnemy()
     {
         GameObject st = Instantiate(stayaPrefab);
-        
         stayaScript = st.GetComponent<MoveForward>();
         stayaScript.SetMoveDir(_moveDirection);
+        
+        
         st.transform.position = spawnPosition;
         
     }
@@ -76,13 +78,6 @@ public class StayaSpawner : MonoBehaviour
         yield return new WaitForSeconds(1);
         Destroy(indicator);
     }
-
-
-
-
-
-
-
 
     IEnumerator StayaSpawn()
     {

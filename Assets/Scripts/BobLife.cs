@@ -35,9 +35,8 @@ public class BobLife : MonoBehaviour
 
     private IEnumerator UnderHit()
     {
-        
+
         yield return new WaitForSeconds(4.5f);
-        Debug.Log("nothit");
         isHit = false;
         animator.SetBool("isHit", false);
     }

@@ -5,20 +5,24 @@ using UnityEngine;
 public class MoveForward : MonoBehaviour
 {
 
-    [SerializeField][Range(1f, 10f)] private float minSpeed = 1f;
-    [SerializeField][Range(2f, 10f)] private float maxSpeed = 1f;
-    [SerializeField] private float fallingSpeed = 2f;
+    [SerializeField] private float minSpeed = 1f;
+    [SerializeField] private float maxSpeed = 2f;
+    [SerializeField] private bool goesUp;
+    private float difficultiMultiplier = 1f;
+    private float fallingSpeed = 1f;
     private Vector2 screenBounds;
     private float speed;
     private int _moveDirection = 1;
-    private SpriteRenderer sprite;
+    
     
     private void Start()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        speed = Random.Range(minSpeed, maxSpeed + 1);   
+        speed = Random.Range(minSpeed, maxSpeed + 1);
+        if (goesUp)
+            fallingSpeed = Random.Range(speed * 0.5f, speed);
+
         
-        sprite = GetComponent<SpriteRenderer>();
         if (_moveDirection != 0)
         {
             Flip();
@@ -27,6 +31,7 @@ public class MoveForward : MonoBehaviour
     }
     void Update()
     {
+        
         if (_moveDirection == 0)
         {
             transform.Translate(new Vector2(-1 * speed * Time.deltaTime, fallingSpeed * Time.deltaTime));
@@ -47,10 +52,16 @@ public class MoveForward : MonoBehaviour
     }
 
 
-
-
     private void Flip()
     {
-        sprite.flipX = !sprite.flipX;
+        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+    }
+    public void UpdateSpeed(float multiplier)
+    {
+        speed *= multiplier;
+        Debug.Log(speed);
     }
 }
+
+
+

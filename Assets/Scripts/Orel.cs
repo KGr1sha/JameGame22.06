@@ -34,5 +34,7 @@ public class Orel : MonoBehaviour
     public void SetGoalPos(Vector2 goalPos)
     {
         goalPosition = goalPos;
+        current = 0;
     }
+    
 }

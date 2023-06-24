@@ -11,7 +11,7 @@ public class OrelSpawner : MonoBehaviour
     private float orelWidth;
     private float orelHeight;
     private float indHeight;
-    private float spawnRate = 1f;
+    private float spawnRate = 3f;
     private Vector2 screenBounds;
     private Vector2 spawnPosition;
     private int r;
@@ -43,7 +43,8 @@ public class OrelSpawner : MonoBehaviour
             enemyScript.SetGoalPos(new Vector2(spawnPosition.x - orelWidth * 2, spawnPosition.y));
         }
         yield return new WaitForSeconds(2f);
-        
+        enemyScript.SetStartPosition(enemy.transform.position);
+        enemyScript.SetGoalPos(spawnPosition);
 
         yield return new WaitForSeconds(5f);
         Destroy(enemy);

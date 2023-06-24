@@ -79,8 +79,6 @@ public class OrelSpawner : MonoBehaviour
         {
             spawnPosition = new Vector2(screenBounds.x + orelWidth, screenBounds.y / 2 - orelHeight / 2);
         }
-        Debug.Log(screenBounds);
-        Debug.Log(spawnPosition);
     }
 
     IEnumerator EagleSpawner()

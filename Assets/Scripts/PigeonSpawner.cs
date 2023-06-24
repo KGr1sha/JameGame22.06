@@ -10,6 +10,7 @@ public class PigeonSpawner : MonoBehaviour
     [SerializeField] GameObject pigeonPrefab;
     [SerializeField] private float spawnRate = 1f;
     private MoveForward pigeonScript;
+    private MoveForward prefabScript;
     private Vector2 screenBounds;
     private Vector2 spawnPos;
     private int moveDir;
@@ -20,6 +21,7 @@ public class PigeonSpawner : MonoBehaviour
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         StartCoroutine(PigeonWave());
+        prefabScript = pigeonPrefab.GetComponent<MoveForward>();
         
     }
 
@@ -64,5 +66,10 @@ public class PigeonSpawner : MonoBehaviour
             SpawnEnemy();
         }
     }
-
+    public void IncreaseDifficulty(float diff)
+    {
+        prefabScript.minSpeed *= diff;
+        prefabScript.maxSpeed *= diff;
+        spawnRate *= 0.8f;
+    }
 }

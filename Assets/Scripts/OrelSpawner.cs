@@ -9,6 +9,7 @@ public class OrelSpawner : MonoBehaviour
     private SpriteRenderer orelSprite;
     private SpriteRenderer indicatorSprite;
     private float orelWidth;
+    private float orelHeight;
     private float indHeight;
     private float spawnRate = 1f;
     private Vector2 screenBounds;
@@ -20,6 +21,7 @@ public class OrelSpawner : MonoBehaviour
         StartCoroutine(EagleSpawner());
         orelSprite = orelPrefab.GetComponent<SpriteRenderer>();
         orelWidth = orelSprite.bounds.size.x / 2;
+        orelHeight = orelSprite.bounds.size.y / 2;
         indicatorSprite = indicatorPrefab.GetComponent<SpriteRenderer>();
         indHeight = indicatorSprite.bounds.size.y / 2;
     }
@@ -29,8 +31,20 @@ public class OrelSpawner : MonoBehaviour
 
         GameObject enemy = Instantiate(orelPrefab);
         enemy.transform.position = spawnPosition;
+        Orel enemyScript = enemy.GetComponent<Orel>();
+        enemyScript.SetStartPosition(spawnPosition);
         if (r == 0)
+        {
             enemy.transform.localScale = new Vector3(enemy.transform.localScale.x * -1, enemy.transform.localScale.y, enemy.transform.localScale.z);
+            enemyScript.SetGoalPos(new Vector2(spawnPosition.x + orelWidth * 2, spawnPosition.y));
+        }
+        if(r == 1)
+        {
+            enemyScript.SetGoalPos(new Vector2(spawnPosition.x - orelWidth * 2, spawnPosition.y));
+        }
+        yield return new WaitForSeconds(2f);
+        
+
         yield return new WaitForSeconds(5f);
         Destroy(enemy);
     }
@@ -58,12 +72,14 @@ public class OrelSpawner : MonoBehaviour
         r = Random.Range(0, 2);
         if (r == 0)
         {
-            spawnPosition = new Vector2(screenBounds.x * -1 - orelWidth, screenBounds.y / 2);
+            spawnPosition = new Vector2(screenBounds.x * -1 - orelWidth, screenBounds.y / 2 - orelHeight / 2);
         }
         if (r == 1)
         {
-            spawnPosition = new Vector2(screenBounds.x + orelWidth, screenBounds.y / 2);
+            spawnPosition = new Vector2(screenBounds.x + orelWidth, screenBounds.y / 2 - orelHeight / 2);
         }
+        Debug.Log(screenBounds);
+        Debug.Log(spawnPosition);
     }
 
     IEnumerator EagleSpawner()

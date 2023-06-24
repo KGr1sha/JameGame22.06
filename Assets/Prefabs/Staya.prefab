@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4454270048858692574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f886d56c61d2d8a4a88da6e96590c91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 3
-  maxSpeed: 5
+  minSpeed: 9
+  maxSpeed: 10
   fallingSpeed: 0
 --- !u!60 &8255547322708076213
 PolygonCollider2D:
@@ -145,15 +145,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.0547546, y: -0.538451}
-      - {x: 0.60138077, y: -0.000045746565}
-      - {x: -0.09852764, y: 0.55246997}
-      - {x: -0.23007676, y: 0.514433}
-      - {x: -0.21253061, y: 0.4405833}
-      - {x: -0.25769925, y: 0.3547706}
-      - {x: -0.15875757, y: 0.316243}
-      - {x: 0.19217825, y: -0.0046928525}
-      - {x: -0.34411046, y: -0.42973918}
-      - {x: -0.2955062, y: -0.56098163}
-      - {x: -0.12041409, y: -0.57286817}
+    - - {x: 0.26326388, y: -0.5760122}
+      - {x: -0.1890242, y: -0.011026308}
+      - {x: 0.21074387, y: 0.5458443}
+      - {x: -0.59684, y: 0.021604478}
+      - {x: -0.59684, y: 0.021604478}
   m_UseDelaunayMesh: 0

@@ -745,6 +745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPower: 5
+  SkipText: {fileID: 1500743318}
 --- !u!50 &1143658811
 Rigidbody2D:
   serializedVersion: 4
@@ -904,7 +905,7 @@ GameObject:
   - component: {fileID: 1500743321}
   - component: {fileID: 1500743320}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SkipText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -927,7 +928,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 700, y: -112}
+  m_AnchoredPosition: {x: 739.4, y: -147.4}
   m_SizeDelta: {x: 87.8101, y: 17.2729}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1500743320
@@ -1094,6 +1095,7 @@ GameObject:
   - component: {fileID: 1816141456}
   - component: {fileID: 1816141455}
   - component: {fileID: 1816141454}
+  - component: {fileID: 1816141458}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1185,6 +1187,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!111 &1816141458
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816141453}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 572c95f63f7d56747baaef4bb1716b81, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 572c95f63f7d56747baaef4bb1716b81, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1824709060
 GameObject:
   m_ObjectHideFlags: 0

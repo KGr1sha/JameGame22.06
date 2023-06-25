@@ -527,7 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b55ae28b1d45d14ea914bbffb8f83c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 1349263283}
   _pigeonSpawner: {fileID: 354502256}
   _stayaSpawner: {fileID: 577284113}
   _orelSpawner: {fileID: 356828182}

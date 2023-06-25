@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb36ae2c298b522478c35b3e4eee3e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &2955715687143791552
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,3 +395,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb36ae2c298b522478c35b3e4eee3e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 2

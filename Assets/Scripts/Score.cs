@@ -18,10 +18,7 @@ public class Score : MonoBehaviour
     private StayaSpawner stayaScript;
     private OrelSpawner orelScript;
     private float highscore;
-    
-    
-    
-    private float difficulty = 1f;
+
     
     
     public int score;
@@ -40,7 +37,7 @@ public class Score : MonoBehaviour
         orelScript = _orelSpawner.GetComponent<OrelSpawner>();
         score = 0;
         highscore = PlayerPrefs.GetInt("highscore");
-        Debug.Log(highscore);
+        
     }
     private IEnumerator addScore()
     {
@@ -58,8 +55,8 @@ public class Score : MonoBehaviour
 
             if (score % 100 == 0)
             {
-                difficulty += .1f;
-                pigeonScript.IncreaseDifficulty(difficulty);
+                
+                pigeonScript.IncreaseDifficulty();
                 stayaScript.IncreaseDifficulty();
             }
         }

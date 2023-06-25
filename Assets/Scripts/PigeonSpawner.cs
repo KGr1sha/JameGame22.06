@@ -16,8 +16,9 @@ public class PigeonSpawner : MonoBehaviour
     private Vector2 spawnPos;
     private int moveDir;
     private float maximumSpeed = 10f;
-    
-    
+
+    [SerializeField] private float difficultyIncreaser = 1.1f;
+
 
     private void Start()
     {
@@ -68,12 +69,12 @@ public class PigeonSpawner : MonoBehaviour
             SpawnEnemy();
         }
     }
-    public void IncreaseDifficulty(float diff)
+    public void IncreaseDifficulty()
     {
-        if (prefabScript.minSpeed < maximumSpeed) prefabScript.minSpeed *= diff;
+        if (prefabScript.minSpeed < maximumSpeed) prefabScript.minSpeed *= difficultyIncreaser;
         else prefabScript.minSpeed = maximumSpeed;
 
-        if (prefabScript.maxSpeed < maximumSpeed)  prefabScript.maxSpeed *= diff;
+        if (prefabScript.maxSpeed < maximumSpeed)  prefabScript.maxSpeed *= difficultyIncreaser;
         else prefabScript.maxSpeed = maximumSpeed;
 
         if(spawnRate > minSpawnRate) spawnRate *= 0.8f;

@@ -40,6 +40,8 @@ public class BobLife : MonoBehaviour
     {
         deathScreen.SetActive(true);
         Debug.Log("DEATH");
+        Time.timeScale = 0f;
+
     }
 
 

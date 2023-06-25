@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BobLife : MonoBehaviour
@@ -11,6 +12,9 @@ public class BobLife : MonoBehaviour
 
     public int maxHealth;
     public int currentHealth;
+
+    [SerializeField] TextMeshProUGUI deathScoreText;
+    [SerializeField] TextMeshProUGUI deathBestScoreText;
 
 
 
@@ -45,6 +49,8 @@ public class BobLife : MonoBehaviour
     private void Death()
     {
         deathScreen.SetActive(true);
+        deathScoreText.text = "SCORE: " + _score.score;
+        deathBestScoreText.text = "BEST SCORE: " + PlayerPrefs.GetInt("highscore");
         Debug.Log("DEATH");
         Time.timeScale = 0f;
 

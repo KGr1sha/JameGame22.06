@@ -20,7 +20,9 @@ public class Score : MonoBehaviour
     private float highscore;
 
     
-    
+
+
+
     public int score;
 
 

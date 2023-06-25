@@ -7,6 +7,7 @@ public class BobLife : MonoBehaviour
     private bool isHit = false;
     [SerializeField] Animator animator;
     private Score _score;
+    [SerializeField] GameObject deathScreen;
 
     private void Start()
     {
@@ -37,6 +38,7 @@ public class BobLife : MonoBehaviour
 
     private void Death()
     {
+        deathScreen.SetActive(true);
         Debug.Log("DEATH");
     }
 

@@ -15,7 +15,7 @@ public class PigeonSpawner : MonoBehaviour
     private Vector2 screenBounds;
     private Vector2 spawnPos;
     private int moveDir;
-    private float maximumSpeed = 10f;
+    private float maximumSpeed = 8f;
     
     
 

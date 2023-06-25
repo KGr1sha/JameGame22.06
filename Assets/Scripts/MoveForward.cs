@@ -40,7 +40,7 @@ public class MoveForward : MonoBehaviour
         {
             transform.Translate(new Vector2(1 * speed * Time.deltaTime, fallingSpeed * Time.deltaTime));
         }
-        if(transform.position.y > screenBounds.y + 2 | transform.position.x < screenBounds.x * -1 - 2 | transform.position.x > screenBounds.x + 2)
+        if(transform.position.y > screenBounds.y + 5 | transform.position.x < screenBounds.x * -1 - 5 | transform.position.x > screenBounds.x + 5)
         {
             Destroy(this.gameObject);
         }

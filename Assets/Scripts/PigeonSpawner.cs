@@ -14,6 +14,7 @@ public class PigeonSpawner : MonoBehaviour
     private Vector2 screenBounds;
     private Vector2 spawnPos;
     private int moveDir;
+    private float maxSpeed = 10f;
     
     
 
@@ -68,8 +69,8 @@ public class PigeonSpawner : MonoBehaviour
     }
     public void IncreaseDifficulty(float diff)
     {
-        prefabScript.minSpeed *= diff;
-        prefabScript.maxSpeed *= diff;
+        if (prefabScript.minSpeed < maxSpeed) prefabScript.minSpeed *= diff;
+        if (prefabScript.maxSpeed < maxSpeed)  prefabScript.maxSpeed *= diff;
         spawnRate *= 0.8f;
     }
 }

@@ -423,6 +423,7 @@ GameObject:
   - component: {fileID: 275378066}
   - component: {fileID: 275378065}
   - component: {fileID: 275378064}
+  - component: {fileID: 275378068}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -514,6 +515,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &275378068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275378063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b55ae28b1d45d14ea914bbffb8f83c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 829532988}
+  _pigeonSpawner: {fileID: 354502256}
+  _stayaSpawner: {fileID: 577284113}
+  score: 0
 --- !u!1 &354502256
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,7 +621,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &510062521
 GameObject:
@@ -1160,10 +1177,10 @@ RectTransform:
   m_Father: {fileID: 275378067}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 218.00635, y: 240.72084}
-  m_SizeDelta: {x: 395.4221, y: 107.446}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 272.5658, y: -84.571625}
+  m_SizeDelta: {x: 504.541, y: 158.0309}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &829532988
 MonoBehaviour:
@@ -1187,12 +1204,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5bab1c8f532d0864685d2a4ca5730473, type: 3}
-    m_FontSize: 69
+    m_FontSize: 60
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 10
+    m_BestFit: 0
+    m_MinSize: 6
     m_MaxSize: 90
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2024,23 +2041,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383f62b9ff4091343bdd7d4a7577d2c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1564596725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1564596712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b55ae28b1d45d14ea914bbffb8f83c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 829532988}
-  _pigeonSpawner: {fileID: 354502256}
-  _stayaSpawner: {fileID: 577284113}
-  pigeonPrefab: {fileID: 5013663390199666461, guid: 944b6da97ce93d44ab21e2cc5c153ecf, type: 3}
-  score: 0
 --- !u!114 &1564596731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2576,37 +2576,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706970380}
   m_CullTransparentMesh: 1
---- !u!1 &1872565646
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1872565647}
-  m_Layer: 0
-  m_Name: DifficultyController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1872565647
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872565646}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1886814553
 GameObject:
   m_ObjectHideFlags: 0
@@ -7805,9 +7774,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 746090718971511412, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1564596718}
-    - targetCorrespondingSourceObject: {fileID: 746090718971511412, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1564596725}
     - targetCorrespondingSourceObject: {fileID: 746090718971511412, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1564596731}

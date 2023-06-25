@@ -53,7 +53,8 @@ public class Score : MonoBehaviour
             if(score > highscore) PlayerPrefs.SetInt("highscore", score);
 
 
-            if (score == 100) orelScript.BeginSpawn();
+            if (score == 75) stayaScript.StartSpawning();
+            if (score == 150) orelScript.BeginSpawn();
 
             if (score % 100 == 0)
             {

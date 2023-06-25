@@ -15,9 +15,14 @@ public class PigeonSpawner : MonoBehaviour
     private Vector2 screenBounds;
     private Vector2 spawnPos;
     private int moveDir;
-    private float maximumSpeed = 10f;
+
 
     [SerializeField] private float difficultyIncreaser = 1.1f;
+
+
+    private float maximumSpeed = 8f;
+    
+    
 
 
     private void Start()

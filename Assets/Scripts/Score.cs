@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,9 +10,7 @@ public class Score : MonoBehaviour
     public static Score instance;
 
 
-
-
-    [SerializeField] private Text scoreText;
+    [SerializeField] private TextMeshPro scoreText;
     [SerializeField] private GameObject _pigeonSpawner;
     [SerializeField] private GameObject _stayaSpawner;
     [SerializeField] private GameObject _orelSpawner;

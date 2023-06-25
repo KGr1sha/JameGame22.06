@@ -28,7 +28,7 @@ public class StayaSpawner : MonoBehaviour
         objectWidth = sprite.bounds.size.x / 2;
         objectHeight = sprite.bounds.size.y / 2;
 
-        StartCoroutine(StayaSpawn());
+        
     }
     void ChoseSpawn()
     {
@@ -84,10 +84,11 @@ public class StayaSpawner : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(spawnRate);
+            
             StartCoroutine(Indicator());
             yield return new WaitForSeconds(1f);
             SpawnEnemy();
+            yield return new WaitForSeconds(spawnRate);
         }
     }
 
@@ -97,5 +98,11 @@ public class StayaSpawner : MonoBehaviour
         if (spawnRate > minSpawnRate) spawnRate *= 0.8f;
         else spawnRate = minSpawnRate;
 
+    }
+
+
+    public void StartSpawning()
+    {
+        StartCoroutine(StayaSpawn());
     }
 }

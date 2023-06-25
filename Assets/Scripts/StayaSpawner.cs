@@ -6,8 +6,8 @@ public class StayaSpawner : MonoBehaviour
 {
     [SerializeField] GameObject stayaPrefab;
     [SerializeField] GameObject indicatorPrefab;
-    [SerializeField] float spawnRate = 5f;
-    private float minSpawnRate = 2f;
+    [SerializeField] float spawnRate = 10f;
+    private float minSpawnRate = 5f;
     private Vector2 spawnPosition;
     private Vector2 screenBounds;
     private int _moveDirection;

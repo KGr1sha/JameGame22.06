@@ -933,7 +933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stayaPrefab: {fileID: 4454270048858692574, guid: 174909574dea3634eb25698c52b14136, type: 3}
   indicatorPrefab: {fileID: 4613237053216583039, guid: 19b026c8d6cbcb347b72d4f7689afac8, type: 3}
-  spawnRate: 5
+  spawnRate: 10
 --- !u!4 &577284115
 Transform:
   m_ObjectHideFlags: 0
@@ -7900,6 +7900,10 @@ PrefabInstance:
     - target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373739051615901123, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: movespeed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8469265603179665207, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
       propertyPath: m_Size.x

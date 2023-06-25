@@ -11,7 +11,7 @@ public class OrelSpawner : MonoBehaviour
     private float orelWidth;
     private float orelHeight;
     private float indHeight;
-    private float spawnRate = 25f;
+    private float spawnRate = 15f;
     private Vector2 screenBounds;
     private Vector2 spawnPosition;
     private int r;
@@ -84,10 +84,11 @@ public class OrelSpawner : MonoBehaviour
     {
         while(true)
         {
-            yield return new WaitForSeconds(spawnRate);
+            
             StartCoroutine(Indicator());
             yield return new WaitForSeconds(5f);
             StartCoroutine(Spawn());
+            yield return new WaitForSeconds(spawnRate);
         }
         
     }

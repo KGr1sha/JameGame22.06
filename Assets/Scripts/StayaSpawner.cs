@@ -7,6 +7,7 @@ public class StayaSpawner : MonoBehaviour
     [SerializeField] GameObject stayaPrefab;
     [SerializeField] GameObject indicatorPrefab;
     [SerializeField] float spawnRate = 5f;
+    private float minSpawnRate = 2f;
     private Vector2 spawnPosition;
     private Vector2 screenBounds;
     private int _moveDirection;
@@ -93,6 +94,8 @@ public class StayaSpawner : MonoBehaviour
 
     public void IncreaseDifficulty()
     {
-        spawnRate *= 0.8f;
+        if (spawnRate > minSpawnRate) spawnRate *= 0.8f;
+        else spawnRate = minSpawnRate;
+
     }
 }

@@ -9,6 +9,7 @@ public class PigeonSpawner : MonoBehaviour
     
     [SerializeField] GameObject pigeonPrefab;
     [SerializeField] private float spawnRate = 1f;
+    private float minSpawnRate = 1f;
     private MoveForward pigeonScript;
     private MoveForward prefabScript;
     private Vector2 screenBounds;
@@ -71,8 +72,12 @@ public class PigeonSpawner : MonoBehaviour
     {
         if (prefabScript.minSpeed < maximumSpeed) prefabScript.minSpeed *= diff;
         else prefabScript.minSpeed = maximumSpeed;
+
         if (prefabScript.maxSpeed < maximumSpeed)  prefabScript.maxSpeed *= diff;
         else prefabScript.maxSpeed = maximumSpeed;
-        spawnRate *= 0.8f;
+
+        if(spawnRate > minSpawnRate) spawnRate *= 0.8f;
+        else spawnRate = minSpawnRate;
+
     }
 }

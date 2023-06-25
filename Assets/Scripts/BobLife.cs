@@ -10,8 +10,8 @@ public class BobLife : MonoBehaviour
     private Score _score;
     [SerializeField] GameObject deathScreen;
 
-    public int maxHealth;
-    public int currentHealth;
+    public int maxHealth = 3;
+    public int currentHealth = 3;
 
     [SerializeField] TextMeshProUGUI deathScoreText;
     [SerializeField] TextMeshProUGUI deathBestScoreText;
@@ -22,6 +22,7 @@ public class BobLife : MonoBehaviour
     private void Start()
     {
         _score = GetComponent<Score>();
+        currentHealth = maxHealth;
     }
 
 

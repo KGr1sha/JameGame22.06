@@ -22,6 +22,16 @@ public class HeartDraw : MonoBehaviour
         {
             CreateEmptyHeart();
         }
+
+        for(int i = 0; i < hearts.Count; i++)
+        {
+            Debug.Log(bobHealth.currentHealth);
+            int heartStatus = (int)Mathf.Clamp(bobHealth.currentHealth - i, 0, 1);
+            if (heartStatus == 0) hearts[i].SetHeartImage("empty");
+            if (heartStatus == 1) hearts[i].SetHeartImage("full");
+        }
+
+
     }
 
 

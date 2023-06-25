@@ -9,7 +9,7 @@ public class Score : MonoBehaviour
 {
     public static Score instance;
 
-    
+
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private GameObject _pigeonSpawner;
     [SerializeField] private GameObject _stayaSpawner;

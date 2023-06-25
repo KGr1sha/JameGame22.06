@@ -54,7 +54,7 @@ public class Score : MonoBehaviour
 
 
             if (score == 75) stayaScript.StartSpawning();
-            if (score == 150) orelScript.BeginSpawn();
+            if (score == 175) orelScript.BeginSpawn();
 
             if (score % 100 == 0)
             {

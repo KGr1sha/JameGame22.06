@@ -1,10 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BobLife : MonoBehaviour
 {
+    [SerializeField] private UnityEvent OnPlayerHit;
+
     private bool isHit = false;
     [SerializeField] Animator animator;
     private Score _score;
@@ -25,28 +29,6 @@ public class BobLife : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy" && !isHit)
-        {
-            isHit = true;
-            animator.SetBool("isHit", true);
-            StartCoroutine(UnderHit());
-        }
-        else
-            if (collision.gameObject.tag == "Enemy" && isHit)
-            {
-            Death();
-            }
-        if (collision.gameObject.tag == "Kluv")
-        {
-            Debug.Log("OREEEEEEL");
-            Death();
-        }
-    }
-
     private void Death()
     {
         deathScreen.SetActive(true);
@@ -57,6 +39,20 @@ public class BobLife : MonoBehaviour
 
     }
 
+    public void TakeDamage(int amount)
+    {
+        if (!isHit)
+        {
+            isHit = true;
+            animator.SetBool("isHit", true);
+            StartCoroutine(UnderHit());
+            currentHealth -= amount;
+            OnPlayerHit.Invoke();
+        }
+        
+
+        if (currentHealth <= 0) Death();
+    }
 
     private IEnumerator UnderHit()
     {
@@ -65,6 +61,4 @@ public class BobLife : MonoBehaviour
         isHit = false;
         animator.SetBool("isHit", false);
     }
-
-
 }

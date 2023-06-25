@@ -7,6 +7,7 @@ public class HeartDraw : MonoBehaviour
     [SerializeField] GameObject heartPrefab;
     [SerializeField] BobLife bobHealth;
     List<HealthHert> hearts = new List<HealthHert>();
+    
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class HeartDraw : MonoBehaviour
     public void DrawHearts()
     {
         ClearHearts();
+
         int heartsToMake = bobHealth.maxHealth;
         for(int i = 0; i < heartsToMake; i++)
         {
@@ -25,7 +27,7 @@ public class HeartDraw : MonoBehaviour
 
         for(int i = 0; i < hearts.Count; i++)
         {
-            Debug.Log(bobHealth.currentHealth);
+            
             int heartStatus = (int)Mathf.Clamp(bobHealth.currentHealth - i, 0, 1);
             if (heartStatus == 0) hearts[i].SetHeartImage("empty");
             if (heartStatus == 1) hearts[i].SetHeartImage("full");

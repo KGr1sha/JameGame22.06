@@ -14,8 +14,10 @@ public class Score : MonoBehaviour
     [SerializeField] private Text scoreText;
     [SerializeField] private GameObject _pigeonSpawner;
     [SerializeField] private GameObject _stayaSpawner;
+    [SerializeField] private GameObject _orelSpawner;
     private PigeonSpawner pigeonScript;
     private StayaSpawner stayaScript;
+    private OrelSpawner orelScript;
     private float highscore;
     
     
@@ -36,6 +38,7 @@ public class Score : MonoBehaviour
         StartCoroutine(addScore());
         pigeonScript = _pigeonSpawner.GetComponent<PigeonSpawner>();
         stayaScript = _stayaSpawner.GetComponent <StayaSpawner>();
+        orelScript = _orelSpawner.GetComponent<OrelSpawner>();
         score = 0;
         highscore = PlayerPrefs.GetInt("highscore");
         Debug.Log(highscore);
@@ -49,7 +52,11 @@ public class Score : MonoBehaviour
             scoreText.text = "SCORE: " + score;
 
             if(score > highscore) PlayerPrefs.SetInt("highscore", score);
-            if (score % 50 == 0)
+
+
+            if (score == 100) orelScript.BeginSpawn();
+
+            if (score % 100 == 0)
             {
                 difficulty += .1f;
                 pigeonScript.IncreaseDifficulty(difficulty);

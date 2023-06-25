@@ -11,14 +11,14 @@ public class OrelSpawner : MonoBehaviour
     private float orelWidth;
     private float orelHeight;
     private float indHeight;
-    private float spawnRate = 3f;
+    private float spawnRate = 25f;
     private Vector2 screenBounds;
     private Vector2 spawnPosition;
     private int r;
     void Start()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        StartCoroutine(EagleSpawner());
+        
         orelSprite = orelPrefab.GetComponent<SpriteRenderer>();
         orelWidth = orelSprite.bounds.size.x / 2;
         orelHeight = orelSprite.bounds.size.y / 2;
@@ -67,7 +67,6 @@ public class OrelSpawner : MonoBehaviour
 
 
 
-
     private void ChoseSpawn()
     {
         r = Random.Range(0, 2);
@@ -91,5 +90,11 @@ public class OrelSpawner : MonoBehaviour
             StartCoroutine(Spawn());
         }
         
+    }
+
+
+    public void BeginSpawn()
+    {
+        StartCoroutine(EagleSpawner());
     }
 }

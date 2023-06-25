@@ -9,6 +9,12 @@ public class BobLife : MonoBehaviour
     private Score _score;
     [SerializeField] GameObject deathScreen;
 
+    public int maxHealth;
+    public int currentHealth;
+
+
+
+
     private void Start()
     {
         _score = GetComponent<Score>();

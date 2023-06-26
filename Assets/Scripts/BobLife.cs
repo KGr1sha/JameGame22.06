@@ -22,6 +22,11 @@ public class BobLife : MonoBehaviour
     [SerializeField] TextMeshProUGUI deathBestScoreText;
 
     [SerializeField] private GameObject musicManagerObj;
+
+    [SerializeField] private GameObject shieldPrefab;
+    [SerializeField] private float shieldDuration;
+    private GameObject shield;
+    private bool shielded = false;
     
 
 
@@ -41,6 +46,24 @@ public class BobLife : MonoBehaviour
 
     }
 
+    public void Shield()
+    {
+        shielded = true;
+        shield = Instantiate(shieldPrefab);
+        shield.transform.position = transform.position;
+        shield.transform.SetParent(this.gameObject.transform);
+        
+        StartCoroutine(UnderShield());
+    }
+
+
+    IEnumerator UnderShield()
+    {
+        yield return new WaitForSeconds(shieldDuration);
+        shielded = false;
+        Destroy(shield);
+    }
+
 
 
     public void Heal(int amount)
@@ -53,7 +76,7 @@ public class BobLife : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        if (!isHit)
+        if (!isHit && !shielded)
         {
             isHit = true;
             animator.SetBool("isHit", true);

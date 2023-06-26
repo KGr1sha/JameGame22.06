@@ -5,11 +5,16 @@ using UnityEngine;
 public class HealthSpawn : MonoBehaviour
 {
     [SerializeField] private GameObject healPackPrefab;
+    [SerializeField] private GameObject shieldPackPrefab;
+    [SerializeField] private GameObject shieldPrefab;
+
+    [SerializeField] private GameObject player;
     [SerializeField] private float spawnRate = 25f;
     private Vector2 spawnPosition;
     private Vector2 screenBorders;
     private float spriteHeight;
     private float spriteWidth;
+    private string powerUp;
 
     private void Start()
     {
@@ -22,17 +27,36 @@ public class HealthSpawn : MonoBehaviour
 
     private void Spawn()
     {
+        GameObject pack;
+        ChosePowerUp();
         SpawnPos();
-        GameObject pack = Instantiate(healPackPrefab);
-        pack.transform.position = spawnPosition;
+        if (powerUp == "heal")
+        {
+            pack = Instantiate(healPackPrefab);
+            pack.transform.position = spawnPosition;
+        }
+        if (powerUp == "shield")
+        {
+            pack = Instantiate(shieldPackPrefab);
+            pack.transform.position = spawnPosition;
+        }
     }
 
+   
 
     private void SpawnPos()
     {
         float cordX = Random.Range(screenBorders.x * -1 + spriteWidth * 2, screenBorders.x - spriteWidth * 2);
         float cordY = screenBorders.y * -1 - spriteHeight * 2;
         spawnPosition = new Vector2(cordX, cordY);
+    }
+
+
+    private void ChosePowerUp()
+    {
+        int r = Random.Range(0, 2);
+        if (r == 0) powerUp = "heal";
+        if (r == 1) powerUp = "shield";
     }
 
 

@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private float parallaxEffect = 0.1f;
+    private Transform cameraPos;
+    private Vector3 prevPos;
     void Start()
     {
-        
+        cameraPos = Camera.main.transform;
+        prevPos = cameraPos.position;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        Vector3 delta = cameraPos.position - prevPos;
+        prevPos = cameraPos.position;
+
+        transform.position += delta * parallaxEffect; 
     }
 }

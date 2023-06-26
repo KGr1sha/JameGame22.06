@@ -277,7 +277,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!199 &55698167
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -373,7 +373,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0
+    scalar: 100
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -1804,7 +1804,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: 1dc6db3456fe3d3408c955b7b8f35798, type: 3}
+    - sprite: {fileID: 21300000, guid: 24548294e8e52684384c78c716035fd0, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -3002,7 +3002,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   NoiseModule:
-    enabled: 1
+    enabled: 0
     strength:
       serializedVersion: 2
       minMaxState: 0

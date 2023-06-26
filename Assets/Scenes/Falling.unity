@@ -32404,23 +32404,10 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 746090718971511412, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
   m_PrefabInstance: {fileID: 1682423137344824940}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1564596718
+--- !u!114 &1564596731 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1564596712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 383f62b9ff4091343bdd7d4a7577d2c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1564596731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4811110189369739578, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+  m_PrefabInstance: {fileID: 1682423137344824940}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564596712}
   m_Enabled: 1
@@ -32428,83 +32415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb95e1682f4c19f4e81d6f86ab2df210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPlayerHit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1280679128}
-        m_TargetAssemblyTypeName: HeartDraw, Assembly-CSharp
-        m_MethodName: DrawHearts
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnPlayerHeal:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1280679128}
-        m_TargetAssemblyTypeName: HeartDraw, Assembly-CSharp
-        m_MethodName: DrawHearts
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  animator: {fileID: 1564596732}
-  deathScreen: {fileID: 2070422615}
-  maxHealth: 3
-  currentHealth: 3
-  deathScoreText: {fileID: 2037242976}
-  deathBestScoreText: {fileID: 1757109663}
-  musicManagerObj: {fileID: 697500002}
-  shieldPrefab: {fileID: 4009983120531344290, guid: 2e5bb717d1573914f865ec3d6b5f1117, type: 3}
-  shieldDuration: 7
---- !u!95 &1564596732
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1564596712}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5c225824614eacc40b89e8bee4e3fcc4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1564596733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1564596712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b55ae28b1d45d14ea914bbffb8f83c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1349263283}
-  _pigeonSpawner: {fileID: 354502256}
-  _stayaSpawner: {fileID: 577284113}
-  _orelSpawner: {fileID: 356828182}
-  score: 0
 --- !u!1 &1578868879
 GameObject:
   m_ObjectHideFlags: 0
@@ -38969,25 +38879,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bob
       objectReference: {fileID: 0}
-    - target: {fileID: 746090718971511412, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
+    - target: {fileID: 2648601818146523241, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 1349263283}
+    - target: {fileID: 2648601818146523241, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: _orelSpawner
+      value: 
+      objectReference: {fileID: 356828182}
+    - target: {fileID: 2648601818146523241, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: _stayaSpawner
+      value: 
+      objectReference: {fileID: 577284113}
+    - target: {fileID: 2648601818146523241, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: _pigeonSpawner
+      value: 
+      objectReference: {fileID: 354502256}
     - target: {fileID: 4448842753107422759, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4448842753107422759, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.8928298
-      objectReference: {fileID: 0}
-    - target: {fileID: 4448842753107422759, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.8928298
-      objectReference: {fileID: 0}
-    - target: {fileID: 4448842753107422759, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.8928298
       objectReference: {fileID: 0}
     - target: {fileID: 4448842753107422759, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -39029,60 +38939,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6373739051615901123, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      propertyPath: movespeed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8469265603179665207, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      propertyPath: m_Size.x
-      value: 0.36422947
-      objectReference: {fileID: 0}
-    - target: {fileID: 8469265603179665207, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      propertyPath: m_Size.y
-      value: 0.5573802
-      objectReference: {fileID: 0}
-    - target: {fileID: 8469265603179665207, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.0024388458
-      objectReference: {fileID: 0}
-    - target: {fileID: 8469265603179665207, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.0068102777
-      objectReference: {fileID: 0}
-    - target: {fileID: 8469265603179665207, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 4811110189369739578, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: deathScreen
+      value: 
+      objectReference: {fileID: 2070422615}
+    - target: {fileID: 4811110189369739578, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: deathScoreText
+      value: 
+      objectReference: {fileID: 2037242976}
+    - target: {fileID: 4811110189369739578, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: musicManagerObj
+      value: 
+      objectReference: {fileID: 697500002}
+    - target: {fileID: 4811110189369739578, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: deathBestScoreText
+      value: 
+      objectReference: {fileID: 1757109663}
+    - target: {fileID: 4811110189369739578, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: OnPlayerHit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1280679128}
+    - target: {fileID: 4811110189369739578, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      propertyPath: OnPlayerHeal.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1280679128}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 746090718971511412, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1564596718}
-    - targetCorrespondingSourceObject: {fileID: 746090718971511412, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1564596731}
-    - targetCorrespondingSourceObject: {fileID: 746090718971511412, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1564596732}
-    - targetCorrespondingSourceObject: {fileID: 746090718971511412, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1564596733}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}

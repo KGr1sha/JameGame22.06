@@ -926,7 +926,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      - m_Target: {fileID: 8524415011117364525, guid: 39e15f5881c85dd4cbed4a7b9ae174fb, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
         m_MethodName: set_sprite
         m_Mode: 2
@@ -938,7 +938,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8524415011117364525, guid: 39e15f5881c85dd4cbed4a7b9ae174fb, type: 3}
+      - m_Target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
         m_MethodName: set_sprite
         m_Mode: 2
@@ -1477,7 +1477,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      - m_Target: {fileID: 8524415011117364525, guid: 39e15f5881c85dd4cbed4a7b9ae174fb, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
         m_MethodName: set_sprite
         m_Mode: 2
@@ -1489,7 +1489,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8524415011117364525, guid: 39e15f5881c85dd4cbed4a7b9ae174fb, type: 3}
+      - m_Target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
         m_MethodName: set_sprite
         m_Mode: 2
@@ -1623,7 +1623,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      - m_Target: {fileID: 8524415011117364525, guid: 39e15f5881c85dd4cbed4a7b9ae174fb, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
         m_MethodName: set_sprite
         m_Mode: 2
@@ -1635,7 +1635,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8524415011117364525, guid: 39e15f5881c85dd4cbed4a7b9ae174fb, type: 3}
+      - m_Target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
         m_MethodName: set_sprite
         m_Mode: 2
@@ -3240,7 +3240,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      - m_Target: {fileID: 8524415011117364525, guid: 39e15f5881c85dd4cbed4a7b9ae174fb, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
         m_MethodName: set_sprite
         m_Mode: 2
@@ -3252,7 +3252,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8524415011117364525, guid: 39e15f5881c85dd4cbed4a7b9ae174fb, type: 3}
+      - m_Target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
         m_MethodName: set_sprite
         m_Mode: 2
@@ -3386,7 +3386,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      - m_Target: {fileID: 8524415011117364525, guid: 39e15f5881c85dd4cbed4a7b9ae174fb, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
         m_MethodName: set_sprite
         m_Mode: 2
@@ -3398,7 +3398,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8524415011117364525, guid: 39e15f5881c85dd4cbed4a7b9ae174fb, type: 3}
+      - m_Target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
         m_MethodName: set_sprite
         m_Mode: 2
@@ -4941,7 +4941,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
+      - m_Target: {fileID: 8524415011117364525, guid: 39e15f5881c85dd4cbed4a7b9ae174fb, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
         m_MethodName: set_sprite
         m_Mode: 2
@@ -4953,7 +4953,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8524415011117364525, guid: 39e15f5881c85dd4cbed4a7b9ae174fb, type: 3}
+      - m_Target: {fileID: 4535903281683769607, guid: 050500103bfad5a4c8b5b881720e1b9e, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
         m_MethodName: set_sprite
         m_Mode: 2

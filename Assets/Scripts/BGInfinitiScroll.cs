@@ -21,7 +21,7 @@ public class BGInfinitiScroll : MonoBehaviour
     void Update()
     {
         transform.Translate(new Vector2(0, speed * Time.deltaTime));
-        if(transform.position.y - camera.transform.position.y > textureSizeY * 4)
+        if(transform.position.y - camera.transform.position.y > textureSizeY * 4.8f)
         {
             transform.position = new Vector2(camera.transform.position.x, camera.transform.position.y);
         }  

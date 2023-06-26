@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class BobLife : MonoBehaviour
 {
     [SerializeField] private UnityEvent OnPlayerHit;
+    [SerializeField] private UnityEvent OnPlayerHeal;
 
     private bool isHit = false;
     [SerializeField] Animator animator;
@@ -20,7 +21,8 @@ public class BobLife : MonoBehaviour
     [SerializeField] TextMeshProUGUI deathScoreText;
     [SerializeField] TextMeshProUGUI deathBestScoreText;
 
-
+    [SerializeField] private GameObject musicManagerObj;
+    
 
 
     private void Start()
@@ -31,13 +33,23 @@ public class BobLife : MonoBehaviour
 
     private void Death()
     {
+        musicManagerObj.GetComponent<Music>().StopMusic();
         deathScreen.SetActive(true);
         deathScoreText.text = "SCORE: " + _score.score;
         deathBestScoreText.text = "BEST SCORE: " + PlayerPrefs.GetInt("highscore");
-        Debug.Log("DEATH");
         Time.timeScale = 0f;
 
     }
+
+
+
+    public void Heal(int amount)
+    {
+        if (currentHealth < maxHealth) currentHealth += amount;
+        OnPlayerHeal.Invoke();
+    }
+
+
 
     public void TakeDamage(int amount)
     {
@@ -49,9 +61,13 @@ public class BobLife : MonoBehaviour
             currentHealth -= amount;
             OnPlayerHit.Invoke();
         }
-        
 
-        if (currentHealth <= 0) Death();
+
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            Death();
+        }
     }
 
     private IEnumerator UnderHit()

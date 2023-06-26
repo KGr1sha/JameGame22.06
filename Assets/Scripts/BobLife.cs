@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class BobLife : MonoBehaviour
 {
     [SerializeField] private UnityEvent OnPlayerHit;
+    [SerializeField] private UnityEvent OnPlayerHeal;
 
     private bool isHit = false;
     [SerializeField] Animator animator;
@@ -45,6 +46,7 @@ public class BobLife : MonoBehaviour
     public void Heal(int amount)
     {
         if (currentHealth < maxHealth) currentHealth += amount;
+        OnPlayerHeal.Invoke();
     }
 
 

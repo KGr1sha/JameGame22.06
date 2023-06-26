@@ -10,6 +10,8 @@ public class Music : MonoBehaviour
 
     void Start()
     {
+        music1.volume = PlayerPrefs.GetFloat("musicVolume");
+        musicLoop.volume = PlayerPrefs.GetFloat("musicVolume");
         music1.Play();
         musicLoop.PlayDelayed(music1.clip.length);
     }

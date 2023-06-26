@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class MusicPlsWork : MonoBehaviour
 {
-    [SerializeField] 
+
     private float volume;
     void Start()
     {

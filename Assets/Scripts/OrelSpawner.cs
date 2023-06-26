@@ -54,6 +54,7 @@ public class OrelSpawner : MonoBehaviour
     IEnumerator Indicator()
     {
         GameObject ind = Instantiate(indicatorPrefab);
+        GetComponent<AudioSource>().Play();
         ChoseSpawn();
         ind.transform.position = new Vector2(spawnPosition.x * -1, screenBounds.y - indHeight);
         if (r == 0)

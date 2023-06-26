@@ -8,11 +8,6 @@ public class MusicControl : MonoBehaviour
     [SerializeField] Slider volumeSlider;
     
 
-    void Awake()
-    {
-        Load();
-    }
-
     void Start()
     {
         if(!PlayerPrefs.HasKey("musicVolume"))

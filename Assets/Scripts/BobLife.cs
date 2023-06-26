@@ -49,9 +49,13 @@ public class BobLife : MonoBehaviour
             currentHealth -= amount;
             OnPlayerHit.Invoke();
         }
-        
 
-        if (currentHealth <= 0) Death();
+
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            // Death();
+        }
     }
 
     private IEnumerator UnderHit()

@@ -21,8 +21,11 @@ public class BobMovement : MonoBehaviour
         {
             sprite.flipX = true;
         }
-        else
+        if (moveDirection.x > 0)
+        {
             sprite.flipX = false;
+        }
+            
     }
     private void FixedUpdate()
     {

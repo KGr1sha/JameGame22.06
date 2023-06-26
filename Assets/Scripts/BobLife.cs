@@ -20,7 +20,8 @@ public class BobLife : MonoBehaviour
     [SerializeField] TextMeshProUGUI deathScoreText;
     [SerializeField] TextMeshProUGUI deathBestScoreText;
 
-
+    [SerializeField] private GameObject musicManagerObj;
+    
 
 
     private void Start()
@@ -31,13 +32,22 @@ public class BobLife : MonoBehaviour
 
     private void Death()
     {
+        musicManagerObj.GetComponent<Music>().StopMusic();
         deathScreen.SetActive(true);
         deathScoreText.text = "SCORE: " + _score.score;
         deathBestScoreText.text = "BEST SCORE: " + PlayerPrefs.GetInt("highscore");
-        Debug.Log("DEATH");
         Time.timeScale = 0f;
 
     }
+
+
+
+    public void Heal(int amount)
+    {
+        if (currentHealth < maxHealth) currentHealth += amount;
+    }
+
+
 
     public void TakeDamage(int amount)
     {
@@ -54,7 +64,7 @@ public class BobLife : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 0;
-            // Death();
+            Death();
         }
     }
 

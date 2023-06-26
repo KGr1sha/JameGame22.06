@@ -7,6 +7,7 @@ public class FirstScroll : MonoBehaviour
 {
     [SerializeField] private float speed = 0.2f;
     [SerializeField] private GameObject infBG;
+    [SerializeField] private GameObject clouds;
     void Update()
     {
         transform.Translate(0, speed * Time.deltaTime, 0);
@@ -15,6 +16,7 @@ public class FirstScroll : MonoBehaviour
         {
             infBG.SetActive(true);
             this.gameObject.SetActive(false);
+            clouds.SetActive(false);
         }
 
 

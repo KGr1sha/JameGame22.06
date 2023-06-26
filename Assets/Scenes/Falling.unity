@@ -33626,6 +33626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   infBG: {fileID: 1044217411}
+  clouds: {fileID: 1180139556}
 --- !u!1 &1983904096
 GameObject:
   m_ObjectHideFlags: 0

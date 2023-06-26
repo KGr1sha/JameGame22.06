@@ -16378,7 +16378,7 @@ GameObject:
   - component: {fileID: 921840593}
   - component: {fileID: 921840592}
   m_Layer: 0
-  m_Name: HealthSpawner
+  m_Name: PowerUpSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16397,6 +16397,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healPackPrefab: {fileID: 8951344642085903956, guid: ab54183d7552d474c90b884911e38a9c, type: 3}
+  shieldPackPrefab: {fileID: 8261817602842712788, guid: 9e0374d052378084e836ff36f4c6449f, type: 3}
+  shieldPrefab: {fileID: 4009983120531344290, guid: 2e5bb717d1573914f865ec3d6b5f1117, type: 3}
+  player: {fileID: 1564596712}
   spawnRate: 45
 --- !u!4 &921840593
 Transform:
@@ -32462,6 +32465,8 @@ MonoBehaviour:
   deathScoreText: {fileID: 2037242976}
   deathBestScoreText: {fileID: 1757109663}
   musicManagerObj: {fileID: 697500002}
+  shieldPrefab: {fileID: 4009983120531344290, guid: 2e5bb717d1573914f865ec3d6b5f1117, type: 3}
+  shieldDuration: 7
 --- !u!95 &1564596732
 Animator:
   serializedVersion: 5

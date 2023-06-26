@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5013663390199666461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f886d56c61d2d8a4a88da6e96590c91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 1
-  maxSpeed: 4
+  minSpeed: 1.1
+  maxSpeed: 4.4
   goesUp: 1
 --- !u!70 &7762588354079422801
 CapsuleCollider2D:
@@ -171,3 +171,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb36ae2c298b522478c35b3e4eee3e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1

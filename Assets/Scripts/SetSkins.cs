@@ -22,7 +22,6 @@ public class SetSkins : MonoBehaviour
     {
         string chosenSkin = GetSkin();
         bobSprite = bob.GetComponent<SpriteRenderer>();
-        Debug.Log(chosenSkin);
         switch (chosenSkin)
         {
             case "default":

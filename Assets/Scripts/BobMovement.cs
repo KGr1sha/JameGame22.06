@@ -4,20 +4,28 @@ using UnityEngine;
 
 public class BobMovement : MonoBehaviour
 {
-    private Vector2 movement;
     private Rigidbody2D rb;
     [SerializeField] private float movespeed = 2f;
+    private Vector2 moveDirection;
+    private SpriteRenderer sprite;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
     }
     void Update()
     {
-        movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        moveDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        if (moveDirection.x < 0)
+        {
+            sprite.flipX = true;
+        }
+        else
+            sprite.flipX = false;
     }
     private void FixedUpdate()
     {
-        rb.MovePosition((Vector2)transform.position + (movement * movespeed * Time.deltaTime));
+        rb.MovePosition((Vector2)transform.position + (moveDirection * movespeed * Time.deltaTime));
     }
 }

@@ -21,6 +21,8 @@ public class SetSkins : MonoBehaviour
     private void Awake()
     {
         string chosenSkin = GetSkin();
+        bobSprite = bob.GetComponent<SpriteRenderer>();
+        Debug.Log(chosenSkin);
         switch (chosenSkin)
         {
             case "default":

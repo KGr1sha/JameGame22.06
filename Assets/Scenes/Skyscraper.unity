@@ -561,7 +561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bob: {fileID: 707795887115558997}
   defaultSkin: {fileID: 21300000, guid: 3c73eacd3ab8e0e40a7fdd4759775b96, type: 3}
-  halal: {fileID: 21300000, guid: 1cf48da383ee9054487ea4f84581f57d, type: 3}
+  halal: {fileID: 21300000, guid: b2785535b89b1ce4ebdfbb8154048cbd, type: 3}
   monkey: {fileID: 21300000, guid: e255862f092e0d64783075a97b61cb17, type: 3}
   money: {fileID: 21300000, guid: 1cf48da383ee9054487ea4f84581f57d, type: 3}
   shit: {fileID: 21300000, guid: ec5c563fd36c23043972cd7603704932, type: 3}

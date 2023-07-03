@@ -5,57 +5,14 @@ using UnityEngine;
 public class SetSkins : MonoBehaviour
 {
     [SerializeField] GameObject bob;
-    private SpriteRenderer bobSprite;
-
-    [Header("SKINS")]
-    [SerializeField] Sprite defaultSkin;
-    [SerializeField] Sprite halal;
-    [SerializeField] Sprite monkey;
-    [SerializeField] Sprite money;
-    [SerializeField] Sprite shit;
-    [SerializeField] Sprite notabean;
-
-
-
+    [SerializeField] PlayerData playerData;
 
     private void Awake()
     {
-        string chosenSkin = GetSkin();
-        bobSprite = bob.GetComponent<SpriteRenderer>();
-        switch (chosenSkin)
-        {
-            case "default":
-                bobSprite.sprite = defaultSkin;
-                break;
-            case "halal":
-                bobSprite.sprite = halal;
-                break;
-            case "monkey":
-                bobSprite.sprite = monkey;
-                break;
-            case "money":
-                bobSprite.sprite = money;
-                break;
-            case "shit":
-                bobSprite.sprite = shit;
-                break;
-            case "notabean":
-                bobSprite.sprite = notabean;
-                break;
-        }
+        bob.GetComponent<SpriteRenderer>().sprite = playerData.playerSkin;
     }
-
-
-
-    public void SetPlayerSkin(string skin)
+    public void SetPlayerSkin(Sprite skin)
     {
-        PlayerPrefs.SetString("skin", skin);
+        playerData.playerSkin = skin;
     }
-
-    private string GetSkin()
-    {
-        return PlayerPrefs.GetString("skin");
-    }
-
-
 }

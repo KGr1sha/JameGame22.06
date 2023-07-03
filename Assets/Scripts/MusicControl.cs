@@ -31,6 +31,7 @@ public class MusicControl : MonoBehaviour
     private void  Load()
     {
         volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
+        Save();
     }
 
     private void Save()

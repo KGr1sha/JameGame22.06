@@ -7,23 +7,23 @@ public class BGInfinitiScroll : MonoBehaviour
     [SerializeField] private float speed;
     private Sprite sprite;
     private float textureSizeY;
-    private Camera camera;
+    private Camera _camera;
 
     private void Start()
     {
         sprite = GetComponent<SpriteRenderer>().sprite;
         Texture2D texture = sprite.texture;
         textureSizeY = texture.height / sprite.pixelsPerUnit;
-        camera = Camera.main;
+        _camera = Camera.main;
     }
 
 
     void Update()
     {
         transform.Translate(new Vector2(0, speed * Time.deltaTime));
-        if(transform.position.y - camera.transform.position.y > textureSizeY * 4.8f)
+        if(transform.position.y - _camera.transform.position.y > textureSizeY * 4.8f)
         {
-            transform.position = new Vector2(camera.transform.position.x, camera.transform.position.y);
+            transform.position = new Vector2(_camera.transform.position.x, _camera.transform.position.y);
         }  
     }
 }

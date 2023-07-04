@@ -1160,10 +1160,10 @@ MonoBehaviour:
       - m_Target: {fileID: 561193375}
         m_TargetAssemblyTypeName: SetSkins, Assembly-CSharp
         m_MethodName: SetPlayerSkin
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 21300000, guid: ec5c563fd36c23043972cd7603704932, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: shit
@@ -1657,12 +1657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bob: {fileID: 69883736}
-  defaultSkin: {fileID: 21300000, guid: 3c73eacd3ab8e0e40a7fdd4759775b96, type: 3}
-  halal: {fileID: 21300000, guid: b2785535b89b1ce4ebdfbb8154048cbd, type: 3}
-  monkey: {fileID: 21300000, guid: e255862f092e0d64783075a97b61cb17, type: 3}
-  money: {fileID: 21300000, guid: 1cf48da383ee9054487ea4f84581f57d, type: 3}
-  shit: {fileID: 21300000, guid: ec5c563fd36c23043972cd7603704932, type: 3}
-  notabean: {fileID: 21300000, guid: dd8c9d46ddea9c147880f3160a752347, type: 3}
+  playerData: {fileID: 11400000, guid: 474ae9ab2309c4d41acd21263a199ec6, type: 2}
 --- !u!1 &586385924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1762,13 +1757,13 @@ MonoBehaviour:
       - m_Target: {fileID: 561193375}
         m_TargetAssemblyTypeName: SetSkins, Assembly-CSharp
         m_MethodName: SetPlayerSkin
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 21300000, guid: ec5c563fd36c23043972cd7603704932, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: default
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &586385927
@@ -1908,10 +1903,10 @@ MonoBehaviour:
       - m_Target: {fileID: 561193375}
         m_TargetAssemblyTypeName: SetSkins, Assembly-CSharp
         m_MethodName: SetPlayerSkin
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 21300000, guid: dd8c9d46ddea9c147880f3160a752347, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: notabean
@@ -2168,7 +2163,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278238975
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -3526,10 +3521,10 @@ MonoBehaviour:
       - m_Target: {fileID: 561193375}
         m_TargetAssemblyTypeName: SetSkins, Assembly-CSharp
         m_MethodName: SetPlayerSkin
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 21300000, guid: b2785535b89b1ce4ebdfbb8154048cbd, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: halal
@@ -3672,10 +3667,10 @@ MonoBehaviour:
       - m_Target: {fileID: 561193375}
         m_TargetAssemblyTypeName: SetSkins, Assembly-CSharp
         m_MethodName: SetPlayerSkin
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 21300000, guid: 1cf48da383ee9054487ea4f84581f57d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: money
@@ -4045,7 +4040,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278238975
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -4767,7 +4762,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278238975
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -5055,7 +5050,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1777887600}
-  - component: {fileID: 1777887599}
+  - component: {fileID: 1777887601}
   m_Layer: 0
   m_Name: MusicManage
   m_TagString: Untagged
@@ -5063,18 +5058,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1777887599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1777887598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfa534f6e3e018b48aa384b0a62d07e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1777887600
 Transform:
   m_ObjectHideFlags: 0
@@ -5090,6 +5073,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1777887601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777887598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9eccf600e4560439df429cdee77026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 807734017}
 --- !u!1 &1822519667
 GameObject:
   m_ObjectHideFlags: 0
@@ -5226,10 +5222,10 @@ MonoBehaviour:
       - m_Target: {fileID: 561193375}
         m_TargetAssemblyTypeName: SetSkins, Assembly-CSharp
         m_MethodName: SetPlayerSkin
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 21300000, guid: e255862f092e0d64783075a97b61cb17, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: monkey
